@@ -1,0 +1,117 @@
+/*============= contact_area css ============*/
+.contact_area {
+  overflow: hidden;
+}
+.contact {
+  padding-top: 0px;
+  padding-bottom: 100px;
+  .title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+.contact_form {
+  .form-group {
+    margin-bottom: 25px;
+    .form-control {
+      font-size: 14px;
+      color: #a2a7af;
+      border-radius: 2px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 3px 4px 0px rgba(0, 6, 33, 0.1);
+      height: 54px;
+      border: 1px solid transparent;
+      padding: 0px 20px;
+      @include placeholder {
+        color: #a2a7af;
+      }
+      &:focus {
+        box-shadow: 0px 10px 20px 0px rgba(0, 6, 33, 0.1);
+        border-color: rgb(211, 218, 250);
+      }
+    }
+    textarea {
+      &.form-control {
+        height: 160px;
+        padding-top: 15px;
+      }
+    }
+    .submit_dark {
+      border-radius: 0px;
+      border: 1px solid $dark;
+      padding: 10px 25px;
+      background: transparent;
+      font-size: 13px;
+      line-height: 25px;
+      color: $dark;
+      font-weight: 600;
+      margin-top: 10px;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: none;
+      transition: all 0.3s linear;
+      &:hover {
+        color: #fff;
+        border-color: $blue;
+        background: $blue;
+      }
+    }
+  }
+}
+
+.contact_info {
+  padding-left: 65px;
+  p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #70757f;
+    margin: 0px;
+    font-weight: 500;
+    span {
+      color: $dark;
+      font-weight: 600;
+    }
+    a {
+      color: #70757f;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+  .social_links {
+    padding: 30px 0px 0px;
+    .contact_title {
+      margin-bottom: 10px;
+    }
+  }
+  .info_item {
+    margin-top: 25px;
+  }
+}
+
+.contact_title {
+  font: 700 16px/28px $ral;
+  color: $dark;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.footer_bottom {
+  font: 400 13px $ral;
+  color: #70757f;
+  background: #ebeef2;
+  padding: 25px 0px;
+  text-transform: uppercase;
+  a {
+    font-weight: 500;
+    color: $blue;
+  }
+  i {
+    color: #fe5656;
+  }
+}
+
+#mapBox {
+  height: 300px;
+  width: 100%;
+}

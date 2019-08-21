@@ -1,0 +1,80 @@
+/*===============service_area css ============*/
+.service_area{
+    background: url("../image/service-bg.jpg") no-repeat scroll center 0 / cover;
+}
+.service_info{
+    margin-bottom: -105px;
+    margin-top: 120px;
+}
+.service_item{
+    position: relative;
+    padding: 100px 56px 35px;
+    text-align: center;
+    background: #fff;
+    height: 100%;
+    box-shadow: 0px 3px 4px 0px rgba(0, 6, 33, 0.1);
+    transition: all 0.4s linear;
+    cursor: pointer;
+    .round_icon{
+        width: 124px;
+        height: 124px;
+        border-radius: 50%;
+        background-color: rgb(79, 109, 245);
+        box-shadow: 0px -8px 0px 0px rgba(79, 109, 245, 0.2);
+        text-align: center;
+        line-height: 124px;
+        font-size: 40px;
+        color: #fff;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        top: -50px;
+        transition: all 0.4s linear;
+    }
+    h3{
+        font-size: 24px;
+        font-weight: 500;
+        transition: color 0.4s linear;
+        &:hover{
+            color: $blue;
+        }
+    }
+    p{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #70757f;
+        padding-top: 5px;
+    }
+    .read_btn{
+        font-size: 13px;
+        text-transform: uppercase;
+        color: $dark;
+        font-weight: 600;
+        display: inline-block;
+        transition: color 0.3s linear;
+        &:before{
+            content:"";
+            width: 20px;
+            height: 2px;
+            background: $dark;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+            transition: background 0.3s linear;
+        }
+        &:hover{
+            color: $blue;
+            &:before{
+                background: $blue;
+            }
+        }
+    }
+    &:hover{
+        transform: translateY(-10px);
+        box-shadow: 0px 10px 20px 0px rgba(0, 6, 33, 0.1);
+        .round_icon{
+            box-shadow: none;
+        }
+    }
+}

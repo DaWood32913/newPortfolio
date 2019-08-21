@@ -1,0 +1,89 @@
+.blog_area{}
+.blog_slider{
+    position: relative;
+    z-index: 1;
+    .blog_item{
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 3px 4px 0px rgba(0, 6, 33, 0.1);
+        margin-bottom: 20px;
+        transition: all 0.3s linear;
+        margin-top: 10px;
+        cursor: pointer;
+        &:hover{
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px 0px rgba(0, 6, 33, 0.1);
+        }
+    }
+    .post_content{
+        padding: 30px;
+        .post_category{
+            padding-bottom: 20px;
+            a{
+                font-size: 12px;
+                line-height: 18px;
+                display: inline-block;
+                border-bottom: 1px solid $dark;
+                color: $dark;
+                text-transform: uppercase;
+                font-weight: 600;
+                margin-right: 20px;
+                &:hover{
+                    color: $blue;
+                    border-color: $blue;
+                }
+            }
+        }
+        h3{
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 33px;
+            margin-bottom: 18px;
+            color: $dark;
+            transition: all 0.3s linear;
+            &:hover{
+                color: $blue;
+            }
+        }
+        p{
+            font-size: 14px;
+            line-height: 26px;
+            color: #70757f;
+            font-weight: 400;
+            margin-bottom: 0px;
+        }
+        .m_btn{
+            margin-top: 30px;
+            padding: 0px;
+            border: 0px;
+            &:hover{
+                background: transparent;
+                color: $blue;
+            }
+        }
+    }
+    .post_author{
+        border-top: 1px solid #f2f2f2;
+        padding: 25px 30px;
+    }
+    .author_img{
+        img{
+            width: auto;
+        }
+        h6{
+            font-size: 14px;
+            line-height: 26px;
+            font-weight: 600;
+            color: $dark;
+            padding-left: 15px;
+            margin: 0px;
+        }
+    }
+    .post_date{
+        a{
+            font-size: 14px;
+            line-height: 26px;
+            font-weight: 500;
+            color: $blue;
+        }
+    }
+}

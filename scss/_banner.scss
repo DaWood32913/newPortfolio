@@ -1,0 +1,586 @@
+.pt-page {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    opacity: 0;
+    top: auto;
+    left: 0;
+    background-color: #f8faff;
+    visibility: hidden;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    transform-style: preserve-3d; 
+}
+.pt-page-current, .no-js .pt-page {
+    visibility: visible;
+    z-index: 90;
+    opacity: 1;
+    height: auto;
+    min-height: 100%;
+}
+.pt-page-1.pt-page-current{
+    -webkit-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    -webkit-animation: rotateCubeLeftIn .6s both ease-in;
+    animation: rotateCubeLeftIn .6s both ease-in;
+}
+.pt-page-2.pt-page-current{
+    -webkit-transform-origin: 150% 50%;
+	transform-origin: 150% 50%;
+	-webkit-animation: rotateSidesIn .5s both ease-out;
+	animation: rotateSidesIn .5s both ease-out;
+}
+.pt-page-3.pt-page-current{
+    -webkit-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+	-webkit-animation: rotateCubeTopIn .6s both ease-in;
+	animation: rotateCubeTopIn .6s both ease-in;
+}
+.pt-page-4.pt-page-current{
+    -webkit-animation: moveFromTop .6s ease both;
+	animation: moveFromTop .6s ease both;
+}
+.pt-page-5.pt-page-current{
+    -webkit-animation: moveFromLeftFade .7s ease both;
+	animation: moveFromLeftFade .7s ease both;
+}
+.pt-page-6.pt-page-current{
+    -webkit-animation: moveFromRightFade .7s ease both;
+	animation: moveFromRightFade .7s ease both;
+}
+.main_body{
+    height: 100%;
+    position: relative;
+    margin-left: 15.8%;
+    .page_wrapper{
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        position: relative;
+        background-color: #f8faff;
+    }
+    .container{
+        margin-left: 90px;
+    }
+    .subpages{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        -webkit-perspective: 1500px;
+        -moz-perspective: 1500px;
+        perspective: 1500px;
+    }
+}
+.page{
+    position: relative;
+    height: 100%;
+}
+
+
+/*====================== home_area css ==================*/
+.home_area{
+    overflow: hidden;
+    .row{
+        height: 100vh;
+    }
+    .personal_img{
+        margin-left: -150px;
+        &.img_two{
+            background: url("../images/24262_379055194237_6784590_n.png") no-repeat scroll;
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            width: 46%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+        }
+    }
+}
+.personal_details{
+    right: -90px;
+    position: relative;
+    h6{
+        font-size: 16px;
+        color: #888e98;
+    }
+    h1{
+        font-size: 60px;
+        line-height: 70px;
+    }
+    h5{
+        font-size: 24px;
+        line-height: 30px;
+        color: #888e98;
+        margin: 20px 0px 50px;
+        &:before{
+            content: "";
+            width: 53px;
+            height: 4px;
+            background: #888e98;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    }
+    .social_icon{
+        li{
+            display: inline-block;
+            a{
+                font-size: 20px;
+                color: #303030;
+                &:after{
+                    content: "";
+                    width: 50px;
+                    height: 1px;
+                    background: #c0c0c0;
+                    display: inline-block;
+                    margin-left: 5px;
+                    transition: all 0.3s linear;
+                }
+                &:hover{
+                    color: $blue;
+                }
+            }
+            &:last-child{
+                a{
+                    &:after{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*============= dot_shape css ============*/
+.dot_shape{
+    .shap{
+        position: absolute;
+        opacity: 0.078;
+        border-radius: 50% !important;
+        animation-name: moveUp;
+    }
+    .shape_one{
+        width: 50px;
+        height: 50px;
+        background-color: #4f6df5;
+        right: 13%;
+        bottom: 29%;
+        animation: moveUp 2s infinite alternate;
+    }
+    .shape_two,.shape_three,.shape_four{
+        width: 30px;
+        height: 30px;
+        opacity: 0.10;
+    }
+    .shape_five,.shape_six{
+        width: 16px;
+        height: 16px;
+    }
+    .shape_two{
+        background-color: #4f6df5;
+        right: 20%;
+        top: 8%;
+        animation: moveUp 1s infinite alternate;
+    }
+    .shape_three{
+        background-color: #ff6000;
+        right: 57%;
+        bottom: 33%;
+        animation: moveUp 3s infinite alternate;
+    }
+    .shape_four{
+        background: #0bb8d2;
+        right: 7%;
+        bottom: 12%;
+        animation: moveUp 4s infinite alternate;
+    }
+    .shape_five{
+        background: #ff0000;
+        right: 38%;
+        bottom: 20%;
+        animation: moveUp 5s infinite alternate;
+    }
+    .shape_six{
+        background: #02c5a2;
+        bottom: 59%;
+        right: 24%;
+        animation: moveUp 3s infinite alternate;
+    }
+    .triangle{
+        position: absolute;
+        opacity: 0.1;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 20px 40px 20px;
+        transform: rotate(-40deg);
+    }
+    .shape_seven{
+        right: 45%;
+        bottom: 67%;
+        transform: rotate(-40deg);
+        border-color: transparent transparent #f54feb  transparent;
+        
+    }
+    .shape_eight{
+        border-width: 0 15px 25px 15px;
+        border-color: transparent transparent #ff8a00  transparent;
+        right: 14%;
+        bottom: 67%;
+    }
+    .shape_nine{
+        border-width: 0 15px 25px 15px;
+        border-color: transparent transparent #00a61f  transparent;
+        right: 28%;
+        bottom: 32%;
+    }
+}
+.scroll_btn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 70px;
+    width: 30px;
+    height: 48px;
+    border: 3px solid #ced2e6;
+    border-radius: 45px;
+    z-index: 2;
+    &:before{
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 12px;
+        border: 3px solid #ced2e6;
+        border-radius: 45px;
+        margin-left: -3px;
+        left: 50%;
+        top: 6px;
+         animation: move 2s infinite alternate;
+    }
+}
+
+
+
+/*============ video background css ============*/
+.home_video_area{
+    .row{
+        min-height: 100vh;
+    }
+    .personal_details{
+        h6,h1,h5{
+            color: #fff;
+        }
+        h5{
+            &:before{
+                background: #fff;
+            }
+        }
+        .social_icon li a{
+            color: #fff;
+        }
+        .icon_hover{
+            li{
+                a{
+                    &:hover{
+                        color: #4f6df5;
+                    }
+                }
+            }
+        }
+    }
+}
+.video-background {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    overflow: hidden;
+    background: $blue;
+    video{
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        opacity: 0.1;
+        z-index: -5;
+    }
+}
+
+
+/*================ home_area_two css =============*/
+.home_area_two{
+    height: 100vh;
+    overflow: hidden;
+    min-height: auto;
+    .portfolio_left{
+        width: 46%;
+        .personal_img{
+            background: url("../image/new-home/portfolio.jpg");
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            width: 46%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+            img{
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+    .portfolio_right{
+        width: 54%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        &:before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background: url("../image/new-home/shape.png") no-repeat scroll center bottom;
+            z-index: -1;
+        }
+        &:after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background: url("../image/new-home/shape2.png") no-repeat scroll top left;
+            z-index: -1;
+        }
+        .personal_details{
+            position: relative;
+            z-index: 1;
+            &:before{
+                content: "";
+                width: 100%;
+                height: 100%;
+                top: 23px;
+                right: -33px;
+                position: absolute;
+                background: url("../image/new-home/dot.png") no-repeat scroll center 0;
+                z-index: -1;
+            }
+            h2{
+                font-size: 46px;
+                line-height: 60px;
+                font-family: $pop;
+                padding-bottom: 25px;
+                span{
+                    color: $blue;
+                }
+            }
+            h6{
+                font: 500 14px/20px $pop;
+                color: #70757f;
+                letter-spacing: 4.2px;
+            }
+            .portfolio_btn{
+                font: 500 12px/52px $ral;
+                color: #fff;
+                background: $blue;
+                border-radius: 3px;
+                text-transform: uppercase;
+                padding: 2px 24px 0px;
+                display: inline-block;
+                letter-spacing: 3.6px;
+                margin-top: 47px;
+                transition: all 0.3s linear;
+                overflow: hidden;
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+                &:before{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: #000;
+                    opacity: 0.1;
+                    transform: translateX(-100%);
+                    transition: all 0.3s linear;
+                    z-index: -1;
+                }
+                &:hover{
+                    &:before{
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.parallax_border{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    .borders{
+        width: 1px;
+        height: 100px;
+        position: absolute;
+        transform: rotate(45deg);
+        &.border_one{
+            background: #58e3e5;
+            right: 23.9%;
+            top: 21%;
+        }
+        &.border_two{
+            background: #58e3e5;
+            right: 22.5%;
+            top: 20%;
+        }
+        &.border_three{
+            background: #9faff9;
+            right: 26.7%;
+            bottom: 22%;
+        }
+        &.border_four{
+            background: #9faff9;
+            right: 28.5%;
+            bottom: 20%;
+        }
+        &.border_five{
+            background: #67e295;
+            right: 40.9%;
+            bottom: 16%;
+            height: 70px;
+        }
+        &.border_six{
+            background: #67e295;
+            right: 39%;
+            bottom: 18.4%;
+            height: 70px;
+        }
+        &.border_seven{
+            background: #f99ff6;
+            right: 12.7%;
+            bottom: 30%;
+        }
+        &.border_eight{
+            background: #f99ff6;
+            right: 12%;
+            bottom: 32%;
+        }
+        &.border_nine{
+            background: #e5e358;
+            right: 3.7%;
+            top: 19%;
+        }
+        &.border_ten{
+            background: #e5e358;
+            right: 5%;
+            top: 20%;
+        }
+    }
+}
+.mr_left{
+    margin-left: 80px;
+}
+
+
+/*============ home area two css ============*/
+.home_area_three{
+    padding-bottom:80px;
+    overflow: hidden;
+    min-height: auto;
+    height: 100%;
+}
+.slider_img{
+    background: #222931;
+    height: 100%;
+    overflow: hidden;
+    .slick-list.draggable{
+    }
+    img{
+        opacity: 0.20;
+        max-width: 100%;
+        width: 100%;
+        max-height: 100%;
+    }
+    &.slick-vertical{
+        .slick-slide{
+            border: 0px;
+        }
+    } 
+}
+
+
+
+/*=========== key frame animation ===========*/
+@keyframes moveUp {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1.2);
+        box-shadow: 4px 0px 8px 0px rgba(0, 6, 33, 0.08);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(16px);
+    }
+}
+
+@keyframes slideInnew{
+    0%{
+        opacity:0;
+        -webkit-transform:translate(50px,-50px) rotate(45deg);
+        -ms-transform:translate(50px,-50px) rotate(45deg);
+        transform:translate(50px,-50px) rotate(45deg);
+    }
+    100%{
+        -webkit-transform:translate(0,0) rotate(45deg);
+        -ms-transform:translate(0,0) rotate(45deg);
+        transform:translate(0,0) rotate(45deg);
+    }
+}
+.slideInnew{
+    -webkit-animation-name:slideInnew;
+    animation-name:slideInnew;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+/*============= slideshow_slider css ===========*/
+
+.slideshow_slider{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #1b1c23;
+    .item{
+        img{
+            opacity: 0.20;
+        }
+    }
+}

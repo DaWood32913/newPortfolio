@@ -1,0 +1,40 @@
+/*=============about_area css ============*/
+.about_area{
+    display: flex;
+    overflow: hidden;
+}
+.about_left{
+    width: calc(50% + 205px);
+    display: flex;
+    align-items: center;
+    .about_content{
+        max-width: 855px;
+        padding-left: 105px;
+        p{
+            font-size: 22px;
+            line-height: 46px;
+            font-weight: 400;
+            span{
+                font-weight: 500;
+                color: $dark;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+.about_right{
+    width: calc(50% - 205px);
+    background-size: cover;
+    background-position: center 0;
+    background: url("../images/feature-img-1-723x334.png") no-repeat scroll;
+    &.about_right_two{
+        background: url("../image/new-home/about.jpg") no-repeat scroll;
+    }
+//    img{
+//        width: auto;
+//        height: 100vh;
+//        position: absolute;
+//        right: 0;
+//    }
+}
+

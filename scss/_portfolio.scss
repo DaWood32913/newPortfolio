@@ -1,0 +1,122 @@
+/*=========== portfolio_area css =============*/
+.gallery-filter {
+  padding: 15px 0px 40px;
+  li {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #70757f;
+    text-transform: uppercase;
+    padding: 8px 22px;
+    margin-right: 5px;
+    transition: color 0.5s ease, all 0.3s linear;
+    cursor: pointer;
+    &:hover,
+    &.active {
+      background: #fff;
+      color: $blue;
+      box-shadow: 0px 6px 10px 0px rgba(0, 6, 33, 0.1);
+    }
+  }
+}
+.portfolio_gallery {
+  margin-bottom: -30px;
+  .gallery_info {
+    padding: 15px;
+    background: #fff;
+    cursor: pointer;
+    margin-bottom: 30px;
+    .gallery_img {
+      position: relative;
+      overflow: hidden;
+      img {
+        max-width: 100%;
+      }
+      .hover_content {
+        position: absolute;
+        width: 90%;
+        height: 100%;
+        padding: 20px;
+        top: 0;
+        transform: translateY(10px);
+        transition: all 0.5s;
+        background: rgba(37, 42, 50, 0.7);
+        opacity: 0;
+        a {
+          color: #fff;
+        }
+        .social_link {
+          a {
+            font-size: 13px;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            display: inline-block;
+            text-align: center;
+            &:hover {
+              background: #fff;
+              color: #4f6df5;
+            }
+          }
+        }
+        .hover_text {
+          position: absolute;
+          bottom: 25px;
+          h3 {
+            font-size: 18px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #fff;
+            transform: translateY(-15px);
+            transition: all 0.5s;
+          }
+          .border_line {
+            width: 220px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            display: block;
+            margin-bottom: 4px;
+          }
+          .category {
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      .gallery_img {
+        .hover_content {
+          opacity: 1;
+          transform: translateY(0);
+          .hover_text {
+            h3 {
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.m_btn {
+  font-size: 13px;
+  line-height: 25px;
+  margin-top: 60px;
+  font-weight: 700;
+  color: $dark;
+  text-transform: uppercase;
+  display: inline-block;
+  border: 1px solid $dark;
+  transition: all 0.2s linear;
+  padding: 8px 25px;
+  &:hover {
+    color: #fff;
+    border-color: $blue;
+    background: $blue;
+  }
+}
